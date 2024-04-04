@@ -25,7 +25,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 const RADIO_NAME = "Rock FM";
 
 // URL of SHOUTCast streaming without / on the final, eg: http://streaming.com:8080
-const URL_STREAMING = "http://104.156.244.180:8484";
+const URL_STREAMING = "https://cast.radios24.eu:8000/stream";
 
 // Software type of your streaming server: icecast and shoutcast are both supported.
 // When choosing icecast, make sure the file 'player.log' in the document root is writeable.
@@ -250,7 +250,7 @@ function Page() {
     }
 }
 
-var audio = new Audio(URL_STREAMING);
+var audio = new Audio(URL_STREAMING + STREAMING_TYPE);
 
 // Player control
 function Player() {
